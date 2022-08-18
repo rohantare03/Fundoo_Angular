@@ -1,0 +1,97 @@
+.formTable{
+    display: flex;
+    justify-content: center;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.Flexbox{
+    background-color: #ffffff;
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fefafa;
+    border-radius: px;
+    box-shadow: 0px 3px 6px #00000029;
+    margin-bottom: 35px;
+    margin-top: 40px;
+}
+
+.form{
+    width: 500px;
+    height: 500px;
+    margin-bottom: 50px;
+    padding: 44px 60px;
+    background: #ffffff 0% 0% no-repeat padding-box;   
+    opacity: 1;
+    padding-right: 0px;
+    padding-left: 25px;
+    
+}
+
+.form1{
+    text-align: center;
+}
+
+.header{
+    font: normal normal bold 24px/37px Roboto;
+    letter-spacing: 0px;
+    color: #42515f;
+    text-align: center;
+    text-transform: capitalize;
+    opacity: 1;
+    padding-bottom: 20px;
+}
+
+.title{
+    font: normal normal normal 24px/37px Roboto;
+    letter-spacing: 0px;
+    color: #42515f;
+    text-align: center;
+    text-transform: capitalize;
+    opacity: 1;
+    padding-bottom: 20px;
+}
+
+.title1{
+    text-align: center;
+}
+
+.row{
+    text-align: center;
+    width: 80%;
+}
+
+.form_text{
+    width: 425px; 
+}
+
+.txt{
+    font-size: 16px;
+    color: #1A73E8;
+}
+
+.message{
+    margin-top: 40px;
+}
+
+.btn{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding-right: 80px;
+    a{
+        color: #1A73E8;
+        font-size: 16px;
+    }
+    button{
+        background-color:#1a73e8;
+        font-size: 20px;
+        width: 65px;
+        height: 30px;
+        border-radius: 7px;
+        border-color: #1a73e8;
+        color: #fff;
+    }
+}
