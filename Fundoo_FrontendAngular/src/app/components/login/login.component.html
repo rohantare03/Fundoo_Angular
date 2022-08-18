@@ -15,32 +15,36 @@
            
               <div class="title">Sign in</div>
               <h3 class="title1">Use your Fundoo Account</h3>
-              <div class="row">
-                <p>
-                    <mat-form-field class="form_text" appearance="outline">
-                        <mat-label>Email</mat-label>
-                        <input matInput placeholder="Email">
-                      </mat-form-field>  
-                </p>
-                <p>
-                    <mat-form-field class="form_text" appearance="outline">
-                        <mat-label>Password</mat-label>
-                        <input matInput placeholder="Password">
-                      </mat-form-field>  
-                </p>
-              </div>
-              <div class="txt" >
-                <p>Forgot Password?</p>
-              </div>
-              <div class="message">
-                <p>Not your computer? Use Guest mode to sign in privately.</p>
-                <p class="txt">Learn more</p>
-              </div>
-
-              <div class="btn" >
-                <a mat-button href="http://localhost:4200/registration">Create Account </a>
-                <button mat-raised-button>Next</button>
-              </div>
+              <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div class="row">
+                  <p>
+                      <mat-form-field class="form_text" appearance="outline">
+                          <mat-label>Email</mat-label>
+                          <input matInput placeholder="" formControlName="email"/>
+                          <mat-error>Enter the Email</mat-error>
+                       </mat-form-field>  
+                  </p>
+                  <p>
+                      <mat-form-field class="form_text" appearance="outline">
+                          <mat-label>Password</mat-label>
+                          <input matInput placeholder="" formControlName="password"/>
+                          <mat-error>Enter the Password</mat-error>    
+                        </mat-form-field>  
+                  </p>
+                </div>
+                <div class="txt" >
+                  <p>Forgot Password?</p>
+                </div>
+                <div class="message">
+                  <p>Not your computer? Use Guest mode to sign in privately.</p>
+                  <p class="txt">Learn more</p>
+                </div>
+  
+                <div class="btn" >
+                  <a mat-button href="http://localhost:4200/registration">Create Account </a>
+                  <button mat-raised-button>Next</button>
+                </div>
+              </form> 
         </div>
     </div>
 </div>
