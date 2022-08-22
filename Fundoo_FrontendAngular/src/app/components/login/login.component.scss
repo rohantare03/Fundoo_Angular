@@ -68,9 +68,12 @@
 }
 
 .txt{
-    font-size: 16px;
-    color: #1A73E8;
+    a{
+        color: #1A73E8;
+        font-size: 16px;
+    }
 }
+   
 
 .message{
     margin-top: 40px;
