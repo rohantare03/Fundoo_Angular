@@ -30,12 +30,13 @@ export class LoginComponent implements OnInit {
         return;
     }
     else{
-      console.log("Login Successful");
+      console.log("Login Successful", this.loginForm.value);
       let reqData = {
         Email:this.loginForm.value.email,
         Password:this.loginForm.value.password
       }
       this.user.Login(reqData).subscribe((response:any) => {
+        localStorage.setItem("token",response.data)
         console.log(response);
       })
     }

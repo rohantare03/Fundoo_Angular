@@ -32,12 +32,13 @@ export class RegistrationComponent implements OnInit {
 
     // stop here if form is invalid
     if (this.registerForm.valid) {
+      console.log("Registration Successful");
       let reqData = {
         FirstName: this.registerForm.value.firstName,
         LastName: this.registerForm.value.lastName,
         Email: this.registerForm.value.email,
         Password: this.registerForm.value.password
-        // service: this.registerForm.value.service,
+        
       }
       this.user.registrations(reqData).subscribe((response : any) => {
         console.log(response);
