@@ -1,0 +1,44 @@
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+  <mat-toolbar class="example-toolbar">
+    <div class="keep-icon">
+      <button class="hov" mat-icon-button (click)="snav.toggle()">
+        <img src="../../../assets/Main menu.svg" width="25px">
+      </button>
+      <img src="../../../assets/googlekeep.png" height="45px" width="50px">
+      <h1 class="example-app-name">Fundoo</h1>
+    </div>
+
+    <div class="search-box">
+      <img src="../../../assets/Search.svg">
+      <input matInput placeholder="search">
+    </div>
+
+    <div class="right-icons">
+      <img src="../../../assets/Refresh.svg">
+      <img src="../../../assets/view.svg">
+      <img src="../../../assets/Settings.svg">
+    </div>
+    <div class="menu">
+      <img src="../../../assets/Apps.svg">
+      <img src="../../../assets/profile.png">
+    </div>
+  </mat-toolbar>
+  
+  <mat-sidenav-container class="example-sidenav-container"  [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+      <mat-nav-list class="nav-list">
+        <a mat-list-item>
+          <img src="../../../assets/Bulb.svg">notes</a>
+        <a mat-list-item>
+          <img src="../../../assets/Reminder.svg" >reminder</a>
+        <a mat-list-item>
+          <img src="../../../assets/Edit.svg">label</a>
+        <a mat-list-item>
+          <img src="../../../assets/Archive.svg">archive</a>
+        <a mat-list-item>
+          <img src="../../../assets/Delete.svg">trash</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <p><router-outlet></router-outlet></p>
+  </mat-sidenav-container>
+</div>

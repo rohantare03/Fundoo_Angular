@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -14,6 +13,15 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
+import { GetAllNotesComponent } from './components/get-all-notes/get-all-notes.component';
+import { CreateNoteComponent } from './components/create-note/create-note.component';
+
+
 
 
 
@@ -23,7 +31,11 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     RegistrationComponent,
     LoginComponent,
     ForgetpasswordComponent,
-    ResetpasswordComponent
+    ResetpasswordComponent,
+    DashboardComponent,
+    GetAllNotesComponent,
+    CreateNoteComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -34,7 +46,11 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatCheckboxModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
+    MatIconModule 
    
   ],
   providers: [],
