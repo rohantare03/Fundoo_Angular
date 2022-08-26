@@ -20,6 +20,11 @@ import {MatListModule} from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { GetAllNotesComponent } from './components/get-all-notes/get-all-notes.component';
 import { CreateNoteComponent } from './components/create-note/create-note.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { DisplayNotesComponent } from './components/display-notes/display-notes.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatCardModule } from '@angular/material/card';
+
 
 
 
@@ -34,7 +39,8 @@ import { CreateNoteComponent } from './components/create-note/create-note.compon
     ResetpasswordComponent,
     DashboardComponent,
     GetAllNotesComponent,
-    CreateNoteComponent
+    CreateNoteComponent,
+    DisplayNotesComponent
     
   ],
   imports: [
@@ -50,7 +56,10 @@ import { CreateNoteComponent } from './components/create-note/create-note.compon
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
-    MatIconModule 
+    MatIconModule,
+    MatMenuModule,
+    MatDialogModule,
+    MatCardModule
    
   ],
   providers: [],

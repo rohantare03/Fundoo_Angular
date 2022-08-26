@@ -1,0 +1,46 @@
+<div>
+  <div *ngIf="display;then takeNotes else inputNotes"></div>
+  <ng-template #takeNotes>
+    <div class="takenotes">
+      <input class="notesbar" type="text" placeholder="Take a note..." (click)="display = !display">
+      <button class="notesbutton">
+        <img class="notes_img" src="../../../assets/checkbox.svg">    
+        <img class="notes_img" src="../../../assets/Paint.svg">
+        <img class="notes_img" src="../../../assets/Image.svg">
+      </button>
+    </div>
+  </ng-template>
+  <ng-template #inputNotes>
+    <form [formGroup]="createForm" (ngSubmit)="onSubmit()">
+      <div class="createnotes">
+        <div class="notesfield">
+
+          <div class="titlebar">
+            <input class="title" type="text" placeholder="Title"  formControlName="title">
+            <button class="notesbutton">
+              <img class="notes_img" src="../../../assets/pin.svg">
+            </button>
+          </div>
+          <input class="desc" type="text" placeholder="Description" style="font-size: 15px; font-weight: 200;"  formControlName="Description">
+          <div class="notesicon">
+            <div class="icons">
+              <button class="notesbutton">
+                <img src="../../../assets/addalert.svg">
+                <img src="../../../assets/addperson.svg">
+                <img src="../../../assets/pallete.svg">
+                <img src="../../../assets/Image.svg">
+                <img src="../../../assets/Archive.svg">
+                <img src="../../../assets/more.svg">
+                <img src="../../../assets/undo.svg">
+                <img src="../../../assets/redo.svg">
+              </button>
+            </div>
+            <button class="notesclose notesbutton">Close</button>           
+          </div>
+        </div>
+      </div>
+    </form>
+  </ng-template>
+</div>
+
+

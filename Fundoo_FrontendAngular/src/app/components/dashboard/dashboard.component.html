@@ -20,7 +20,12 @@
     </div>
     <div class="menu">
       <img src="../../../assets/Apps.svg">
-      <img src="../../../assets/profile.png">
+      <button mat-icon-button [matMenuTriggerFor]="logout" class="logoutbtn">
+        <img src="../../../assets/profile.png">
+      </button>
+      <mat-menu #logout="matMenu">
+        <img src="../../../assets/Logout.svg">
+      </mat-menu>      
     </div>
   </mat-toolbar>
   
