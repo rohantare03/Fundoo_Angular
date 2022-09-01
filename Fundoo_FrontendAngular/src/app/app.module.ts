@@ -24,7 +24,12 @@ import { MatMenuModule } from '@angular/material/menu';
 import { DisplayNotesComponent } from './components/display-notes/display-notes.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatCardModule } from '@angular/material/card';
-
+import { UpdateNoteComponent } from './components/update-note/update-note.component';
+import { FormsModule } from '@angular/forms';
+import { IconsComponent } from './components/icons/icons.component';
+import { TrashNotesComponent } from './components/trash-notes/trash-notes.component';
+import { ArchiveNotesComponent } from './components/archive-notes/archive-notes.component';
+import { AuthguardServiceService } from './services/authguard-service.service';
 
 
 
@@ -40,7 +45,11 @@ import { MatCardModule } from '@angular/material/card';
     DashboardComponent,
     GetAllNotesComponent,
     CreateNoteComponent,
-    DisplayNotesComponent
+    DisplayNotesComponent,
+    UpdateNoteComponent,
+    IconsComponent,
+    TrashNotesComponent,
+    ArchiveNotesComponent
     
   ],
   imports: [
@@ -59,10 +68,13 @@ import { MatCardModule } from '@angular/material/card';
     MatIconModule,
     MatMenuModule,
     MatDialogModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule
    
   ],
-  providers: [],
+  providers: [
+    AuthguardServiceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

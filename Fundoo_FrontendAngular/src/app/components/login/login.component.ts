@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserService } from 'src/app/services/userService/user.service';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -38,6 +39,7 @@ export class LoginComponent implements OnInit {
       this.user.Login(reqData).subscribe((response:any) => {
         localStorage.setItem("token",response.data)
         console.log(response);
+        
       })
     }
    

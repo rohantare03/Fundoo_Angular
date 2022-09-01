@@ -21,7 +21,7 @@
               <img class="notes_img" src="../../../assets/pin.svg">
             </button>
           </div>
-          <input class="desc" type="text" placeholder="Description" style="font-size: 15px; font-weight: 200;"  formControlName="Description">
+          <input class="desc" type="text" placeholder="Description" style="font-size: 15px; font-weight: 200;"  formControlName="description">
           <div class="notesicon">
             <div class="icons">
               <button class="notesbutton">
@@ -35,7 +35,7 @@
                 <img src="../../../assets/redo.svg">
               </button>
             </div>
-            <button class="notesclose notesbutton">Close</button>           
+            <button class="notesclose notesbutton"  (ngSubmit)="onSubmit()">Close </button>           
           </div>
         </div>
       </div>

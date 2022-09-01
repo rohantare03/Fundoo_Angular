@@ -34,4 +34,40 @@ export class NotesService {
     }
     return this.httpService.getService('/Notes/Retrieve',true,header)
   }
+
+  updatenotes(reqdata: any, noteID: any){
+
+    let header = {
+      headers:new HttpHeaders({
+        'Content-type':'application/json',
+        'Authorization': 'Bearer '+ this.token
+      })
+    }
+    return this.httpService.putService('/Notes/Update?NoteId='+ noteID,reqdata,true,header)
+  }
+
+  trashnotes(reqdata: any){
+    // this.token=localStorage.getItem('token');
+
+    let header = {
+      headers:new HttpHeaders({
+        'Content-type':'application/json',
+        'Authorization': 'Bearer '+ this.token
+      })
+    }
+    return this.httpService.putService('/Notes/Trash?NoteID='+reqdata.noteID,{},true,header)
+  }
+
+  archivenotes(reqdata: any){
+    // this.token=localStorage.getItem('token');
+
+    let header = {
+      headers:new HttpHeaders({
+        'Content-type':'application/json',
+        'Authorization': 'Bearer '+ this.token
+      })
+    }
+    return this.httpService.putService('/Notes/Archive?NoteID='+reqdata.noteID,{},true,header)
+  }
+
 }

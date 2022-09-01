@@ -107,7 +107,7 @@ h1.example-app-name {
       border-radius: 50%;
     }
     img{
-      margin-right: 10px;
+    
       padding: 10px;
       height: 25px;
     }   
@@ -118,6 +118,25 @@ h1.example-app-name {
   background-color: #fff;
   border-radius: 50%;
   align-content: center;
+}
+
+::ng-deep
+.mat-menu-panel {
+  min-width: 50px;
+  max-width: 280px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  max-height: calc(100vh - 48px);
+  border-radius: 4px;
+  outline: 0;
+  min-height: 64px;
+  position: relative;
+}
+
+::ng-deep
+.mat-menu-content:not(:empty) {
+  padding-top: 29px;
+  padding-left: 39px;
 }
 
 .nav-list{

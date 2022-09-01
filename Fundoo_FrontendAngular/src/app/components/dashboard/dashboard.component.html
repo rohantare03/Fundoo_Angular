@@ -24,7 +24,7 @@
         <img src="../../../assets/profile.png">
       </button>
       <mat-menu #logout="matMenu">
-        <img src="../../../assets/Logout.svg">
+        <img src="../../../assets/Logout.svg" width="25px">
       </mat-menu>      
     </div>
   </mat-toolbar>
@@ -32,15 +32,15 @@
   <mat-sidenav-container class="example-sidenav-container"  [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
     <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
       <mat-nav-list class="nav-list">
-        <a mat-list-item>
+        <a mat-list-item routerLink="/dashboard/notes">
           <img src="../../../assets/Bulb.svg">notes</a>
         <a mat-list-item>
           <img src="../../../assets/Reminder.svg" >reminder</a>
         <a mat-list-item>
           <img src="../../../assets/Edit.svg">label</a>
-        <a mat-list-item>
+        <a mat-list-item routerLink="/dashboard/archive">
           <img src="../../../assets/Archive.svg">archive</a>
-        <a mat-list-item>
+        <a mat-list-item routerLink="/dashboard/trash">
           <img src="../../../assets/Delete.svg">trash</a>
       </mat-nav-list>
     </mat-sidenav>

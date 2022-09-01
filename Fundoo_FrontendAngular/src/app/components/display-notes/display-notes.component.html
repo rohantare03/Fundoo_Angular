@@ -1,0 +1,27 @@
+<div class="display-note row">
+  <div *ngFor="let note of NotesList">
+    <mat-card class="note-card">
+      <button class="pinbutton">
+        <img class="pin" src="../../../assets/pin.svg">
+      </button>
+      <mat-card-title class="note-title" (click)="openDialog(note)">
+        {{note.title}}
+      </mat-card-title>
+      <mat-card-content class="note-description" (click)="openDialog(note)">
+        {{note.description}}
+        <div> {{note.noteID}}</div>
+      </mat-card-content>
+      <div class="icons">
+        <!-- <button class="notesbutton">
+          <img src="../../../assets/addalert.svg">
+          <img src="../../../assets/addperson.svg">
+          <img src="../../../assets/pallete.svg">
+          <img src="../../../assets/Image.svg">
+          <img src="../../../assets/Archive.svg">
+          <img src="../../../assets/more.svg">
+        </button> -->
+        <app-icons [noteObject]="note"></app-icons>
+      </div>
+    </mat-card>
+  </div>
+</div>

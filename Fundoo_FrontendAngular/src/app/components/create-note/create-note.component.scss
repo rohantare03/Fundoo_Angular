@@ -69,6 +69,7 @@
     box-sizing: border-box;
     position: relative;
     min-width: 580px;
+    background: none;
 }
 .notesicon{
     display: flex;
@@ -94,6 +95,7 @@
     position: relative;
     min-width: 380px;
     word-wrap: break-word;
+    background: none;
 }
 .notesclose{
     font-size: 17px;

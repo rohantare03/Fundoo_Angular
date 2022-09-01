@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NotesService } from 'src/app/services/notesService/notes.service';
-import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-create-note',
@@ -14,16 +14,23 @@ export class CreateNoteComponent implements OnInit {
   token : any;
   submitted = false
 
-  constructor(private formBuilder: FormBuilder, private note: NotesService, private activeRoute: ActivatedRoute) { }
+  constructor(private formBuilder: FormBuilder, private note: NotesService) { }
 
   ngOnInit(): void {
     this.createForm = this.formBuilder.group({
       title: ['', Validators.required],
-      Description: ['', Validators.required]
+      description: ['', Validators.required]
     })
-    this.token = this.activeRoute.snapshot.paramMap.get('token');
-    console.log(this.token);
+    // console.log(this.token);
   }
+
+  // opendisplay(): void {
+  //   this.display=true;
+  // }
+
+  // closedisplay(): void {
+  //   this.display=false;
+  // }
 
   onSubmit() {
     this.submitted=true;
@@ -31,14 +38,16 @@ export class CreateNoteComponent implements OnInit {
       console.log("notes created Successful");
       let reqData = {
         title: this.createForm.value.title,
-        description: this.createForm.value.Description
+        description: this.createForm.value.description
 
       }
       console.log(reqData);
       this.note.createnotes(reqData).subscribe((response : any) => {
         console.log(response);
       });
+      
     }
+    this.display=true;
   }
 
 }
