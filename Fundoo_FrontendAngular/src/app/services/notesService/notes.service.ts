@@ -47,8 +47,7 @@ export class NotesService {
   }
 
   trashnotes(reqdata: any){
-    // this.token=localStorage.getItem('token');
-
+    
     let header = {
       headers:new HttpHeaders({
         'Content-type':'application/json',
@@ -59,7 +58,7 @@ export class NotesService {
   }
 
   archivenotes(reqdata: any){
-    // this.token=localStorage.getItem('token');
+    
 
     let header = {
       headers:new HttpHeaders({
@@ -68,6 +67,18 @@ export class NotesService {
       })
     }
     return this.httpService.putService('/Notes/Archive?NoteID='+reqdata.noteID,{},true,header)
+  }
+
+  notesColor(reqdata: any){
+    
+
+    let header = {
+      headers:new HttpHeaders({
+        'Content-type':'application/json',
+        'Authorization': 'Bearer '+ this.token
+      })
+    }
+    return this.httpService.putService('/Notes/Color?NoteID='+reqdata.noteID +'&color=' +reqdata.color,{},true,header)
   }
 
 }

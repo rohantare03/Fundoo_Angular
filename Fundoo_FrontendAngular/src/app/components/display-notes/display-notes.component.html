@@ -1,6 +1,6 @@
 <div class="display-note row">
-  <div *ngFor="let note of NotesList">
-    <mat-card class="note-card">
+  <div *ngFor="let note of NotesList | filter: searchNote">
+    <mat-card class="note-card" [style.background]="note.color">
       <button class="pinbutton">
         <img class="pin" src="../../../assets/pin.svg">
       </button>
@@ -20,7 +20,7 @@
           <img src="../../../assets/Archive.svg">
           <img src="../../../assets/more.svg">
         </button> -->
-        <app-icons [noteObject]="note"></app-icons>
+        <app-icons [noteObject]="note" (NotesDisplay)="receiveNotesDisplay($event)"></app-icons>
       </div>
     </mat-card>
   </div>

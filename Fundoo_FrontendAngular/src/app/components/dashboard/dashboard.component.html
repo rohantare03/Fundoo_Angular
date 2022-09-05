@@ -10,7 +10,7 @@
 
     <div class="search-box">
       <img src="../../../assets/Search.svg">
-      <input matInput placeholder="search">
+      <input matInput placeholder="search" (keyup)="search($event)">
     </div>
 
     <div class="right-icons">
@@ -23,8 +23,9 @@
       <button mat-icon-button [matMenuTriggerFor]="logout" class="logoutbtn">
         <img src="../../../assets/profile.png">
       </button>
-      <mat-menu #logout="matMenu">
-        <img src="../../../assets/Logout.svg" width="25px">
+      <mat-menu #logout="matMenu">   
+          <button mat-menu-item (click)="Logout()">Logout</button>
+          <!-- <img src="../../../assets/Logout.svg" width="25px" > -->  
       </mat-menu>      
     </div>
   </mat-toolbar>
