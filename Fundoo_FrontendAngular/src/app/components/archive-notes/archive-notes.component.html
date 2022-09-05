@@ -1,0 +1,25 @@
+<!-- <app-display-notes [NotesList]="archiveList"></app-display-notes> -->
+
+<div class="display-note row">
+    <div *ngFor="let note of archiveList">
+      <mat-card class="note-card" [style.background]="note.color">
+        <mat-card-title class="note-title">
+          {{note.title}}
+        </mat-card-title>
+        <mat-card-content class="note-description">
+          {{note.description}}
+          <div> {{note.noteID}}</div>
+        </mat-card-content>
+        <div class="icons">
+          <button class="notesbutton">
+            <img src="../../../assets/addalert.svg">
+            <img src="../../../assets/addperson.svg">
+            <img src="../../../assets/pallete.svg">
+            <img src="../../../assets/Image.svg">
+            <img src="../../../assets/Unarchive.svg" (click)="Unarchive(note)">
+            <img src="../../../assets/more.svg">
+          </button>
+        </div>
+      </mat-card>
+    </div>
+  </div>
