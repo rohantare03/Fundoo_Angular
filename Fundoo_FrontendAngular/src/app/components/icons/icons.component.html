@@ -1,0 +1,27 @@
+<div class="icongroup">
+  <img class="search_image" style="margin-right: 3px;
+      height: 20px;" src="../../../assets/addalert.svg">
+  <img class="search_image" style="margin-right: 3px;
+      height: 20px;" src="../../../assets/addperson.svg">
+  <img class="search_image" style="margin-right: 3px;
+      height: 20px;" src="../../../assets/pallete.svg" [matMenuTriggerFor]="paletteMenu">
+  <mat-menu #paletteMenu="matMenu">
+    <div *ngFor='let colors of colorArray'>
+      <button class="colorIcon" [style.background]="colors.code" (click)="selectColor(colors)"></button>
+    </div>
+  </mat-menu>
+  <img class="search_image" style="margin-right: 3px;
+      height: 20px;" src="../../../assets/Image.svg">
+  <img class="search_image" style="margin-right: 3px;
+      height: 20px;" src="../../../assets/Archive.svg" (click)="onArchive()">
+  <img class="search_image" style="margin-right: 3px;
+      height: 20px;" src="../../../assets/more.svg" [matMenuTriggerFor]="more">
+  <mat-menu #more="matMenu">
+    <button mat-menu-item (click)="onDelete()">Delete note</button>
+    <button mat-menu-item>Add Label</button>
+    <button mat-menu-item>Add drawing</button>
+    <button mat-menu-item>Make a copy</button>
+    <button mat-menu-item>Show checkboxes</button>
+    <button mat-menu-item>Copy to google Docs</button>
+  </mat-menu>
+</div>
